@@ -1,0 +1,6 @@
+RewriteEngine ON
+##Rules for external rewrite.
+RewriteCond %{THE_REQUEST} \s/([^.]*)\.php\?id=(\S+)\s [NC]
+RewriteRule ^ /%1/%2? [R=301,L]
+##Rule for internal rewrite.
+RewriteRule ^([^/]*)/([^/]*)/?$ $1?id=$3 [L]
