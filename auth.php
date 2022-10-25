@@ -1,5 +1,5 @@
 <?php
-include_once '../common/database.php';
+include_once 'database.php';
 include_once 'functions.php';
 include_once 'config.php';
 header("Access-Control-Allow-Origin: *");
