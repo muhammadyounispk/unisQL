@@ -1,5 +1,6 @@
-# unisQL secure API IN PHP
-API is secured with JWT barrier Token
+# unisQL
+Make APIs secured with JWT barrier Token
+
 it will return data in Json
 HIT POST REQUEST TO  :datas.php 
 
