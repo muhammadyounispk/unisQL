@@ -1,8 +1,7 @@
 <?php
-include_once '../common/database.php';
-include_once 'functions.php';
-include_once '../common/functions.php';
 include_once 'config.php';
+include_once 'database.php';
+include_once 'functions.php';
 $bearer_token = get_bearer_token();
 $is_jwt_valid = is_jwt_valid($bearer_token);
 if($is_jwt_valid) {
