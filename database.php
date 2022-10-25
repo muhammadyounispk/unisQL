@@ -6,19 +6,12 @@
 
 class db {
 
-    public static function open() { // opens the db connection. Specify different databases for local and live server and it will automatically select the correct one
-        $servers = array('localhost', '127.0.0.1', 'warrior');
-        if (in_array($_SERVER['HTTP_HOST'], $servers)) { //for localhost
+    public static function open() { 
             $dbuser = 'root';
             $dbpwd = '';
             $dbname = 'hikaya';
             $dbserver = 'localhost';
-        } else { //for live server
-            $dbuser = 'orangeho_db3';
-            $dbpwd = 'Nzgd[)[$X_ZT';
-            $dbname = 'orangeho_db3';
-            $dbserver = 'localhost';
-        }
+       
         $db = mysqli_connect($dbserver, $dbuser, $dbpwd, $dbname);
         if ($db->connect_errno > 0) {
             echo "Failed to connect to MySQL: " . $db->connect_error;
